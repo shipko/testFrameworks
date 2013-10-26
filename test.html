@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test page</title>
+	<script type="text/javascript" src="test.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+	<div class="test" id="test">
+		
+	</div>
+	<script>
+		groupTest('Тест фреймворка',{
+			'get_id': function(){var element = document.getElementById('test');},
+			'get_class': function(){var element = document.getElementsByClassName('test');},
+			'append': function(){
+				var spn = document.createElement('span');
+				spn.setAttribute('class','testspan');
+				document.body.appendChild(spn);
+			},
+			'get_id_jquery': function(){ var element = $('#test')}
+		});
+	</script>
+</body>	
+</html>
